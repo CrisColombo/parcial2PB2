@@ -1,6 +1,5 @@
 package ar.edu.unlam.pb2.parcial2;
 
-
 public abstract class Criatura {
 	protected String nombre;
 	protected Integer energia;
@@ -14,7 +13,7 @@ public abstract class Criatura {
 		this.inestable = false;
 	}
 
-	public abstract void entrenar(); 
+	public abstract void entrenar();
 
 	public abstract void pacificar();
 
@@ -43,4 +42,5 @@ public abstract class Criatura {
 		if (this.energia < 0)
 			this.energia = 0;
 	}
+	
 }

@@ -8,20 +8,20 @@ public class BendicionDelRio extends Transformacion {
 
 	@Override
 	public void entrenar() {
-		  Integer energiaActual = criaturaOriginal.getEnergia();
-	        Integer energiaDuplicada = energiaActual * 2;
+		Integer energiaActual = criaturaOriginal.getEnergia();
+		Integer energiaDuplicada = energiaActual * 2;
 
-	        if (energiaDuplicada > 180) {
-	            energiaDuplicada = 180;
-	        }
+		if (energiaDuplicada > 180) {
+			energiaDuplicada = 180;
+		}
 
-	        int incremento = energiaDuplicada - energiaActual;
-	        criaturaOriginal.modificarEnergia(incremento);
+		int incremento = energiaDuplicada - energiaActual;
+		criaturaOriginal.modificarEnergia(incremento);
 	}
 
 	@Override
 	public void pacificar() {
-criaturaOriginal.pacificar();
+		criaturaOriginal.pacificar();
 	}
-
+	
 }

@@ -24,15 +24,15 @@ public class TransformacionesTest {
 		transformada.entrenar();
 		assertEquals(Integer.valueOf(180), normal.getEnergia());
 	}
-	
+
 	@Test
 	public void queLlamaInternaAumente30SiEsFuego() {
-	    Criatura normal = new CriaturaDomesticada("Pepo", 20, Afinidad.FUEGO);
-	    Criatura transformada = new LlamaInterna(normal);
-	    transformada.entrenar();
-	    assertEquals(Integer.valueOf(50), normal.getEnergia());
+		Criatura normal = new CriaturaDomesticada("Pepo", 20, Afinidad.FUEGO);
+		Criatura transformada = new LlamaInterna(normal);
+		transformada.entrenar();
+		assertEquals(Integer.valueOf(50), normal.getEnergia());
 	}
-	
+
 	@Test
 	public void queLlamaInternaSeVuelvaInestableSiNoEsFuego() {
 
@@ -43,26 +43,26 @@ public class TransformacionesTest {
 
 		assertTrue(normal.esInestable());
 	}
-	
+
 	@Test
 	public void queVinculoTerrestreNoTengaEnergiasMenorA50() {
 
-	    Criatura normal = new CriaturaDomesticada("Pepi", 40, Afinidad.TIERRA);
-	    Criatura transformada = new VinculoTerrestre(normal);
+		Criatura normal = new CriaturaDomesticada("Pepi", 40, Afinidad.TIERRA);
+		Criatura transformada = new VinculoTerrestre(normal);
 
-	    transformada.entrenar(); 
+		transformada.entrenar();
 
-	    assertEquals(Integer.valueOf(50), normal.getEnergia());
+		assertEquals(Integer.valueOf(50), normal.getEnergia());
 	}
-	
+
 	@Test
 	public void queAscensoDelVientoCambieAfinidadTemporalmenteAAire() {
 
-	    Criatura normal = new CriaturaDomesticada("Voladora", 20, Afinidad.FUEGO);
-	    Criatura transformada = new AscensoDelViento(normal);
+		Criatura normal = new CriaturaDomesticada("Voladora", 20, Afinidad.FUEGO);
+		Criatura transformada = new AscensoDelViento(normal);
 
-	    transformada.entrenar();
+		transformada.entrenar();
 
-	    assertEquals(Afinidad.FUEGO, normal.getAfinidad());
+		assertEquals(Afinidad.FUEGO, normal.getAfinidad());
 	}
 }

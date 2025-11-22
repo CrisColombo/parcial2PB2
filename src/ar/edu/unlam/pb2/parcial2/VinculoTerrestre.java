@@ -8,18 +8,15 @@ public class VinculoTerrestre extends Transformacion {
 
 	@Override
 	public void entrenar() {
-		 criaturaOriginal.entrenar();
+		criaturaOriginal.entrenar();
 
-	        if (criaturaOriginal.getEnergia() < 50) {
-	            criaturaOriginal.modificarEnergia(50 - criaturaOriginal.getEnergia());
-	        }
+		if (criaturaOriginal.getEnergia() < 50) {
+			criaturaOriginal.modificarEnergia(50 - criaturaOriginal.getEnergia());
+		}
 	}
 
 	@Override
 	public void pacificar() {
-        criaturaOriginal.pacificar();
-
-
+		criaturaOriginal.pacificar();
 	}
-
 }

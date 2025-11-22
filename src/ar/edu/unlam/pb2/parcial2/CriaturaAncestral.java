@@ -9,14 +9,12 @@ public class CriaturaAncestral extends Criatura {
 	@Override
 	public void entrenar() {
 		 modificarEnergia(20);
-
 	}
 
 	@Override
 	public void pacificar() {
 		this.inestable = false;
 		modificarEnergia(-20);
-
 	}
 	
 	@Override
@@ -25,6 +23,6 @@ public class CriaturaAncestral extends Criatura {
 		if (this.energia < 100) {
 			this.energia = 100;
 		}
-
-
-}}
+}
+	
+}
