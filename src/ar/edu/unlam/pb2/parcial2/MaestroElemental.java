@@ -1,6 +1,8 @@
 package ar.edu.unlam.pb2.parcial2;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -24,7 +26,6 @@ public class MaestroElemental {
 	}
 	public Criatura getCriatura(String nombreCriatura) {
 		return criaturas.get(nombreCriatura);
-
 	}
 	
 	
@@ -49,5 +50,12 @@ public class MaestroElemental {
 				criatura.pacificar();
 			}
 		}
+		
+		public List<Criatura> obtenerTodasLasCriaturas() {
+		    return new ArrayList<>(criaturas.values());
+		}
 
+		public Object getNombre() {
+			return nombre;
+		}
 }
